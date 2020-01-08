@@ -23,7 +23,6 @@ dependencies:
     edx_django_service_gunicorn_extra: '{{ REGISTRAR_GUNICORN_EXTRA }}'
     edx_django_service_nginx_port: '{{ REGISTRAR_NGINX_PORT }}'
     edx_django_service_ssl_nginx_port: '{{ REGISTRAR_SSL_NGINX_PORT }}'
-    edx_django_service_media_storage_backend: '{{ REGISTRAR_MEDIA_STORAGE_BACKEND }}'
     edx_django_service_memcache: '{{ REGISTRAR_MEMCACHE }}'
     edx_django_service_automated_users: '{{ REGISTRAR_AUTOMATED_USERS }}'
     edx_django_service_post_migrate_commands: '{{ registrar_post_migrate_commands }}'
