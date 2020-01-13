@@ -97,56 +97,12 @@ edx_django_service_repos:
     DESTINATION: '{{ edx_django_service_code_dir }}'
     SSH_KEY: '{{ edx_django_service_git_identity }}'
 
-edx_django_service_secret_key: null
-
-edx_django_service_data_dir: '{{ COMMON_DATA_DIR }}/{{ edx_django_service_name }}'
-edx_django_service_media_root: '{{ edx_django_service_data_dir }}/media'
-edx_django_service_media_url: '/media/'
-
-edx_django_service_staticfiles_storage: 'django.contrib.staticfiles.storage.StaticFilesStorage'
-
-edx_django_service_media_storage_backend:
-  DEFAULT_FILE_STORAGE: 'django.core.files.storage.FileSystemStorage'
-  MEDIA_ROOT: '{{ edx_django_service_media_root }}'
-  MEDIA_URL: '{{ edx_django_service_media_url }}'
-
 edx_django_service_memcache: [ 'memcache' ]
 
-edx_django_service_default_db_host: 'localhost'
-edx_django_service_default_db_name: '{{ edx_django_service_name }}'
-edx_django_service_default_db_atomic_requests: false
-edx_django_service_default_db_conn_max_age: 60
-edx_django_service_db_user: 'REPLACE-ME'
-edx_django_service_db_password: 'password'
-edx_django_service_db_options:
-  connect_timeout: 10
-  init_command: "SET sql_mode='STRICT_TRANS_TABLES'"
-
-edx_django_service_databases:
-  default:
-    ENGINE: 'django.db.backends.mysql'
-    NAME: '{{ edx_django_service_default_db_name }}'
-    USER: '{{ edx_django_service_db_user }}'
-    PASSWORD: '{{ edx_django_service_db_password }}'
-    HOST: '{{ edx_django_service_default_db_host }}'
-    PORT: '3306'
-    ATOMIC_REQUESTS: '{{ edx_django_service_default_db_atomic_requests }}'
-    CONN_MAX_AGE: '{{ edx_django_service_default_db_conn_max_age }}'
-    OPTIONS: '{{ edx_django_service_db_options }}'
-
-edx_django_service_config_default:
-  SECRET_KEY: '{{ edx_django_service_secret_key }}'
-  TIME_ZONE: 'UTC'
-  MEDIA_STORAGE_BACKEND: '{{ edx_django_service_media_storage_backend }}'
-  STATICFILES_STORAGE: '{{ edx_django_service_staticfiles_storage }}'
-
-  DATABASES: '{{ edx_django_service_databases }}'
-
-# NOTE: This should be overridden by inheriting service-specific role.
-edx_django_service_config_overrides: {}
-edx_django_service_config: '{{ edx_django_service_config_default|combine(edx_django_service_config_overrides) }}'
 
 edx_django_service_automated_users: {}
+
+edx_django_service_sandbox_build: false
 
 # This array contains commands that should be run after migration.
 #
