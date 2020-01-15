@@ -10,7 +10,5 @@ ENTERPRISE_CATALOG_GUNICORN_EXTRA: '--reload'
 ENTERPRISE_CATALOG_MEMCACHE: ['edx.devstack.memcached:11211']
 ENTERPRISE_CATALOG_EXTRA_APPS: []
 ENTERPRISE_CATALOG_URL_ROOT: 'http://enterprise-catalog:18160'
-enterprise_catalog_environment:
-  ENTERPRISE_CATALOG_CFG: "/edx/app/enterprise_catalog/enterprise_catalog/enterprise_catalog/settings/enterprise_catalog.yml"
 
 edx_django_service_is_devstack: true
