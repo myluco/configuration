@@ -44,6 +44,8 @@ ECOMMERCE_LMS_URL_ROOT: 'http://127.0.0.1:8000'
 # Used to automatically configure OAuth2 Client
 ECOMMERCE_SOCIAL_AUTH_EDX_OAUTH2_KEY: 'ecommerce-sso-key'
 ECOMMERCE_SOCIAL_AUTH_EDX_OAUTH2_SECRET: 'ecommerce-sso-secret'
+ECOMMERCE_BACKEND_SERVICE_EDX_OAUTH2_KEY: 'ecommerce-backend-service-key'
+ECOMMERCE_BACKEND_SERVICE_EDX_OAUTH2_SECRET: 'ecommerce-backend-service-secret'
 
 # NOTE: The contents of the certificates should be set in private configuration
 ecommerce_apple_pay_merchant_certificate_directory: '/edx/etc/ssl'
