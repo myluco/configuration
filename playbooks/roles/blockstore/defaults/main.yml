@@ -37,6 +37,12 @@ BLOCKSTORE_NGINX_HOSTNAME: '~^((stage|prod)-)?{{ blockstore_service_name }}.*'
 BLOCKSTORE_NGINX_PORT: '1{{ blockstore_gunicorn_port }}'
 BLOCKSTORE_SSL_NGINX_PORT: '4{{ blockstore_gunicorn_port }}'
 
+BLOCKSTORE_DEFAULT_DB_NAME: 'blockstore'
+BLOCKSTORE_DATABASE_USER: 'blkstr01'
+BLOCKSTORE_DATABASE_PASSWORD: 'password'
+BLOCKSTORE_DATABASE_HOST: 'localhost'
+BLOCKSTORE_DATABASE_PORT: 3306
+
 BLOCKSTORE_DJANGO_SETTINGS_MODULE: 'blockstore.settings.production'
 
 # See edx_django_service_automated_users for an example of what this should be

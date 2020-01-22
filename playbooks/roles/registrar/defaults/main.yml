@@ -36,6 +36,12 @@ registrar_debian_pkgs: []
 REGISTRAR_NGINX_PORT: '1{{ registrar_gunicorn_port }}'
 REGISTRAR_SSL_NGINX_PORT: '4{{ registrar_gunicorn_port }}'
 
+REGISTRAR_DEFAULT_DB_NAME: 'registrar'
+REGISTRAR_MYSQL_HOST: 'localhost'
+# MySQL usernames are limited to 16 characters
+REGISTRAR_MYSQL_USER: 'registrar001'
+REGISTRAR_MYSQL_PASSWORD: 'password'
+
 REGISTRAR_MEMCACHE: [ 'memcache' ]
 
 REGISTRAR_DJANGO_SETTINGS_MODULE: 'registrar.settings.production'

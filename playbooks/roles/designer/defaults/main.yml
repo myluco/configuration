@@ -27,6 +27,12 @@ designer_debian_pkgs: []
 DESIGNER_NGINX_PORT: '1{{ designer_gunicorn_port }}'
 DESIGNER_SSL_NGINX_PORT: '4{{ designer_gunicorn_port }}'
 
+DESIGNER_DEFAULT_DB_NAME: 'designer'
+DESIGNER_MYSQL_HOST: 'localhost'
+# MySQL usernames are limited to 16 characters
+DESIGNER_MYSQL_USER: 'designer001'
+DESIGNER_MYSQL_PASSWORD: 'password'
+
 DESIGNER_MEMCACHE: [ 'memcache' ]
 
 DESIGNER_DJANGO_SETTINGS_MODULE: 'designer.settings.production'
